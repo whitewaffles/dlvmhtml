@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>디비서버</title>
+		<style>
+			.button-group {
+				margin-left: 220px;
+				margin-top: 17px;
+				user-select: none;
+			}
+			.button {
+				background-color: paleturquoise;
+				border: none;
+				padding: 12px 20px;
+				display: inline-block; /* 버튼을 같은 라인에 나란히 표시 */
+				margin-right: -6px; /* 브라우저 간 차이를 고려하여 겹침을 조정 */
+			}
+			.button:hover {
+            background-color: hsl(180, 65%, 71%); /* 호버 시 배경색을 짙은 푸른색으로 변경 */ 
+			}
+
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const buttons = document.querySelectorAll('.button');
+				buttons.forEach(button => {
+					button.addEventListener('dragstart', function(event) {
+						event.preventDefault(); // 드래그 이벤트 방지
+					});
+				});
+			});
+		</script>
+		
+
+	</head>
+	<body>
+		<button 
+		style="background-color: rgba(0, 0, 0, 0); border:none; margin-left: 220px; margin-top: 15px;"
+		type="button"
+		onclick="alert('클릭!')">
+			<img src="https://ifh.cc/g/bcRR89.png"/>
+		</button>
+
+
+		<div class="button-group">
+			<!-- 공지버튼 -->
+			<button class="button" type="button">
+				공지
+			</button>
+	
+			<!-- 코드 버튼 -->
+			<button class="button" type="button">
+				코드
+			</button>
+
+			<!-- 커뮤니티 버튼 -->
+			<button class="button" type="button">
+				커뮤니티
+			</button>
+
+			<!-- 이벤트 버튼 -->
+			<button class="button" type="button">
+				이벤트
+			</button>
+		</div>
+
+		
+
+		
+	
+
+	</body>
+</html>
